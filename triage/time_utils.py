@@ -5,7 +5,7 @@ def utc_now_iso() -> str:
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
-def parse_iso_datetime(value: str):
+def parse_iso_datetime(value: str) -> datetime | None:
     if not value:
         return None
     try:
